@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://github.com/Gyarbij/BridgEQ/blob/master/images/mercedeseqhb_logo.png" height="200">
+    <img src="https://github.com/Gyarbij/BridgEQ/blob/main/images/mercedeseqhb_logo.png" height="200">
 </p>
 
 
@@ -9,7 +9,7 @@ Homebridge control of Mercedes EQ vehicles.
 
 ## Info
 
-<img src="https://github.com/Gyarbij/BridgEQ/blob/master/images/homekit_mercedesme.gif" align="right" alt="Apple Home">
+<img src="https://github.com/Gyarbij/BridgEQ/blob/main/images/homekit_mercedesme.gif" align="right" alt="Apple Home">
 
 This dynamic platform plugin allows control of **Mercedes Me** capable cars. At the moment it is only possible to get information like vehicle status, lock status, fuel status etc. If in the future the possibility of e.g. locking or unlocking the car becomes possible, this will also be implemented.
 
@@ -123,7 +123,7 @@ Please setup your config in Config UI X under ```Plugins > Homebridge Mercedes M
   ]
 }
 ```
-See [Example Config](https://github.com/Gyarbij/BridgEQ/blob/master/example-config.json) for more details.
+See [Example Config](https://github.com/Gyarbij/BridgEQ/blob/main/example-config.json) for more details.
 
 
 ### Settings
@@ -164,12 +164,12 @@ If you have any issues with the plugin, you can enable the debug mode, which wil
 
 If you experiencing issues with your generated token, you can easily refresh it via Config UI X. Below you can see how to do it.
 
-<img src="https://github.com/Gyarbij/BridgEQ/blob/master/images/hb_mercedesme_ui_refreshToken.gif" align="center" alt="CustomUI Refresh Token">
+<img src="https://github.com/Gyarbij/BridgEQ/blob/main/images/hb_mercedesme_ui_refreshToken.gif" align="center" alt="CustomUI Refresh Token">
 
 
 ## Changelog
 
-See the [changelog](https://github.com/Gyarbij/BridgEQ/blob/master/CHANGELOG.md) for changes between versions of this package.
+See the [changelog](https://github.com/Gyarbij/BridgEQ/blob/main/CHANGELOG.md) for changes between versions of this package.
 
 
 
