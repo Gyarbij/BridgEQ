@@ -1,3 +1,8 @@
+<p align="center">
+    <img src="https://github.com/SeydX/homebridge-mercedesme/blob/master/images/mercedeseqhb_logo.png" height="200">
+</p>
+
+
 # BridgEQ
 Homebridge control of Mercedes EQ vehicles.
 
@@ -8,7 +13,7 @@ Homebridge control of Mercedes EQ vehicles.
 
 This dynamic platform plugin allows control of **Mercedes Me** capable cars. At the moment it is only possible to get information like vehicle status, lock status, fuel status etc. If in the future the possibility of e.g. locking or unlocking the car becomes possible, this will also be implemented.
 
-Any system capable of running [Homebridge](https://github.com/nfarina/homebridge/) can be used to run **homebridge-mercedesme**. The only need is Mercedes Me capable car.
+Any system capable of running [Homebridge](https://github.com/nfarina/homebridge/) can be used to run **BridgEQ**. The only need is Mercedes Me capable car.
 
 
 
