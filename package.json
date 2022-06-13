@@ -1,0 +1,46 @@
+{
+  "name": "BridgEQ",
+  "version": "1",
+  "description": "BridgEQ",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint --fix ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gyarbij/BridgEQ.git"
+  },
+  "author": "Gyarbij (https://github.com/Gyarbij/BridgEQ)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Gyarbij/BridgEQ/issues"
+  },
+  "homepage": "https://github.com/Gyarbij/BridgEQ#readme",
+  "keywords": [
+    "mercedes",
+    "mercedesme",
+    "mercedes-eq",
+    "eqs",
+    "smarthome"
+  ],
+  "engines": {
+    "node": ">=12.18.3",
+    "homebridge": "^1.1.6"
+  },
+  "dependencies": {
+    "@homebridge/plugin-ui-utils": "^0.0.19",
+    "axios": "^0.21.1",
+    "fs-extra": "^10.0.0",
+    "simple-oauth2": "^4.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.14.3",
+    "@babel/eslint-parser": "7.14.4",
+    "@babel/eslint-plugin": "7.13.16",
+    "eslint": "^7.27.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-prettier": "^3.4.0",
+    "prettier": "^2.3.0"
+  }
+}
