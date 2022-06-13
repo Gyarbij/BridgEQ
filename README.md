@@ -4,7 +4,7 @@
 
 
 # BridgEQ
-Homebridge control of Mercedes EQ vehicles.
+Homebridge control of Mercedes EQ vehicles based on hombridge-mercedes.
 
 
 ## Info
