@@ -1,0 +1,49 @@
+{
+  "bridge": {
+      ...
+  },
+  "platforms": [
+    {
+      "platform": "MercedesPlatform",
+      "debug": false,
+      "cars": [
+        {
+          "name": "Mercedes-AMG EQS 53 4MATIC+",
+          "clientID": "1b851746-2x58-7y8r-6548-12ft58w159zu",
+          "clientSecret": "d896ct55-c85c-6363-9999-25iu6985mo10",
+          "vin": "W1KCG2DBXNA012292",
+          "model": "AMG EQS 53",
+          "manufacturer": "Mercedes-AMG",
+          "maxRange": 685,
+          "polling": 60,
+          "electricVehicle": true,
+          "tankBatteryType": "LIGHTBULB"
+        },
+        {
+          "name": "Mercedes-Benz EQE 350+",
+          "clientID": "1b851746-2x58-7y8r-6548-12ft58w159zu",
+          "clientSecret": "d896ct55-c85c-6363-9999-25iu6985mo10",
+          "vin": "W1K2951211F002060",
+          "model": "EQE 350+",
+          "manufacturer": "Mercedes-Benz",
+          "maxRange": 644,
+          "polling": 120,
+          "electricVehicle": true,
+          "tankBatteryType": "HUMIDITY"
+        },
+        {
+          "name": "Mercedes-Benz C300e AMG Line Limited",
+          "clientID": "1b851746-2x58-7y8r-6548-12ft58w159zu",
+          "clientSecret": "d896ct55-c85c-6363-9999-25iu6985mo10",
+          "vin": "WDD1234567N123456",
+          "model": "Mercedes C300e",
+          "manufacturer": "Mercedes",
+          "maxRange": 700,
+          "polling": 120,
+          "hybridVehicle": true,
+          "tankBatteryType": "HUMIDITY"
+        }
+      ]
+    }
+  ]
+}

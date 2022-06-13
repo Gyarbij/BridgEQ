@@ -1,0 +1,199 @@
+{
+  "pluginAlias": "MercedesPlatform",
+  "pluginType": "platform",
+  "singular": true,
+  "customUi": true,
+  "footerDisplay": "For documentation please see [GitHub repository](https://github.com/Gyarbij/BridgEQ)",
+  "schema": {
+    "name": {
+      "title": "Name",
+      "type": "string",
+      "default": "MercedesPlatform",
+      "description": "Name for the log."
+    },
+    "debug": {
+      "title": "Debug",
+      "type": "boolean",
+      "description": "Enables additional output in the log."
+    },
+    "vehicles": {
+      "title": "Vehicles",
+      "required": true,
+      "type": "array",
+      "items": {
+        "name": "Vehicle Config",
+        "type": "object",
+        "properties": {
+          "name": {
+            "title": "Name",
+            "description": "The name of your vehicle in HomeKit",
+            "type": "string",
+            "required": true
+          },
+          "clientID": {
+            "title": "Client ID",
+            "description": "Client ID from https://developer.mercedes-benz.com/",
+            "type": "string",
+            "required": true
+          },
+          "clientSecret": {
+            "title": "Client Secret",
+            "description": "Client Secret from https://developer.mercedes-benz.com/",
+            "type": "string",
+            "required": true
+          },
+          "vin": {
+            "title": "Vehicle Identification Number (VIN)",
+            "description": "VIN of the vehicle",
+            "type": "string",
+            "required": true
+          },
+          "manufacturer": {
+            "name": "Manufacturer",
+            "type": "string",
+            "description": "Set the manufacturer name for display in the Home app."
+          },
+          "model": {
+            "title": "Model",
+            "description": "Vehicle model",
+            "type": "string",
+            "required": false
+          },
+          "maxRange": {
+            "title": "Max Range",
+            "description": "Maximum distance after full charge",
+            "type": "integer",
+            "required": false
+          },
+          "electricVehicle": {
+            "title": "Electric Vehicle",
+            "type": "boolean",
+            "description": "Check if your car is an electric vehicle."
+          },
+          "hybridVehicle": {
+            "title": "Hybrid Vehicle",
+            "type": "boolean",
+            "description": "Check if your car is a hybrid vehicle."
+          },
+          "tankBatteryType": {
+            "title": "Battery Capacity/Battery Accessory Type",
+            "type": "string",
+            "description": "You can choose between several accessory types for your electric vehicle battery and/or tank load. If 'none' is choosen, only the tank load (for non electric vehicle) or battery level (electric vehicle) will be shown as a battery service within the accessory.",
+            "oneOf": [
+              {
+                "title": "Humidity Sensor",
+                "enum": [
+                  "HUMIDITY"
+                ]
+              },
+              {
+                "title": "Lighhtbulb",
+                "enum": [
+                  "LIGHTBULB"
+                ]
+              }
+            ]
+          },
+          "polling": {
+            "title": "Polling",
+            "description": "Mercedes Me API Polling in seconds",
+            "type": "integer",
+            "required": false,
+            "placeholder": 60,
+            "minimum": 60
+          },
+          "token": {
+            "titel": "Token",
+            "type": "object",
+            "properties": {
+              "access_token": {
+                "title": "Access Token",
+                "type": "string",
+                "required": true
+              },
+              "refresh_token": {
+                "title": "Refresh Token",
+                "type": "string",
+                "required": true
+              },
+              "token_type": {
+                "title": "Token Type",
+                "type": "string",
+                "required": false
+              },
+              "expires_in": {
+                "title": "Expires in",
+                "type": "integer",
+                "required": false
+              },
+              "expires_at": {
+                "title": "Expires at",
+                "type": "string",
+                "required": false
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "layout": [
+    "name",
+    "debug",
+    {
+      "key": "vehicles",
+      "type": "array",
+      "orderable": false,
+      "buttonText": "Add new vehicle",
+      "items": [
+        "vehicles[].name",
+        "vehicles[].clientID",
+        "vehicles[].clientSecret",
+        "vehicles[].vin",
+        "vehicles[].electricVehicle",
+        "vehicles[].hybridVehicle",
+        "vehicles[].tankBatteryType",
+        {
+          "key": "vehicles[]",
+          "type": "section",
+          "title": "Branding",
+          "expandable": true,
+          "expanded": true,
+          "orderable": false,
+          "items": [
+            "vehicles[].manufacturer",
+            "vehicles[].model"
+          ]
+        },
+        {
+          "key": "vehicles[]",
+          "type": "section",
+          "title": "Extras",
+          "expandable": true,
+          "expanded": true,
+          "orderable": false,
+          "items": [
+            "vehicles[].maxRange",
+            "vehicles[].polling"
+          ]
+        },
+        {
+          "key": "vehicles[].token",
+          "type": "section",
+          "title": "Autherization",
+          "description": "Generated credentials. Do not modify!",
+          "expandable": true,
+          "expanded": false,
+          "orderable": false,
+          "items": [
+            "vehicles[].token.access_token",
+            "vehicles[].token.refresh_token",
+            "vehicles[].token.token_type",
+            "vehicles[].token.expires_in",
+            "vehicles[].token.expires_at"
+          ]
+        }
+      ]
+    }
+  ]
+}
