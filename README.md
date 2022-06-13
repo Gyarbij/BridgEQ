@@ -11,7 +11,7 @@ Homebridge control of Mercedes EQ vehicles based on hombridge-mercedes.
 
 <img src="https://github.com/Gyarbij/BridgEQ/blob/main/images/homekit_mercedesme.gif" align="right" alt="Apple Home">
 
-This dynamic platform plugin allows control of **Mercedes Me** capable cars. At the moment it is only possible to get information like vehicle status, lock status, fuel status etc. If in the future the possibility of e.g. locking or unlocking the car becomes possible, this will also be implemented.
+This dynamic platform plugin allows control of **Mercedes Me** capable vehicles. At the moment it is only possible to get information like vehicle status, lock status, fuel status etc. If in the future the possibility of e.g. locking or unlocking the car becomes possible, this will also be implemented.
 
 Any system capable of running [Homebridge](https://github.com/nfarina/homebridge/) can be used to run **BridgEQ**. The only need is Mercedes Me capable car.
 
@@ -68,7 +68,7 @@ The Version 2 is completely new designed. It supports [Config UI X Plugin UI Uti
  
 ## Configuration
 
-Please setup your config in Config UI X under ```Plugins > Homebridge Mercedes Me > Settings.``` 
+Please setup your config in Config UI X under ```Plugins > BridgEQ > Settings.``` 
  
  
 ## Example config.json:
@@ -130,25 +130,25 @@ See [Example Config](https://github.com/Gyarbij/BridgEQ/blob/main/example-config
 ### Settings
 
 * `platform` - **required** : Must be 'MercedesPlatform'
-* `cars.name` - **required** : Name of the Accessory (*unique*)
-* `cars.clientID` - **required** : Client ID obtained from https://developer.mercedes-benz.com
-* `cars.clientSecret` - **required** : Client Secret obtained from https://developer.mercedes-benz.com
-* `cars.vin` - **required** : Vehicle Identification Number (VIN)
-* `cars.manufacturer` - **not required** : Car Manufacturer
-* `cars.model` - **not required** : Model of the car (Default: Mercedes)
-* `cars.maxRange` - **not required** : Maximum distance after full tank load (for calculating range in % for battery state if API doesnt send the percentage)
-* `cars.polling` - **not required** : Time in seconds for polling Mercedes API (Default: 60s)
-* `cars.electricVehicle` - **not required** : Enable if your car is a electric vehicle (Default: false)
-* `cars.hybridVehicle` - **not required** : Enable if your car is a hybrid vehicle (Default: false)
-* `cars.tankBatteryType` - **not required** : Choose between several accessory types (HUMIDITY | LIGHTBULB) to show the remaining tank load and/or electric vehicle battery value in percent
+* `vehicles.name` - **required** : Name of the Accessory (*unique*)
+* `vehicles.clientID` - **required** : Client ID obtained from https://developer.mercedes-benz.com
+* `vehicles.clientSecret` - **required** : Client Secret obtained from https://developer.mercedes-benz.com
+* `vehicles.vin` - **required** : Vehicle Identification Number (VIN)
+* `vehicles.manufacturer` - **not required** : Car Manufacturer
+* `vehicles.model` - **not required** : Model of the car (Default: Mercedes)
+* `vehicles.electricVehicle` - **not required** : Enable if your car is a electric vehicle (Default: true)
+* `vehicles.hybridVehicle` - **not required** : Enable if your car is a hybrid vehicle (Default: false)
+* `vehicles.maxRange` - **not required** : Maximum distance after full tank load (for calculating range in % for battery state if API doesnt send the percentage) (Default: false)
+* `vehicles.polling` - **not required** : Time in seconds for polling Mercedes API (Default: 60s)
+* `vehicles.tankBatteryType` - **not required** : Choose between several accessory types (HUMIDITY | LIGHTBULB) to show the remaining range and/or hybrid vehicle battery and/or tank load value in percent
 
 
 ## Supported clients
 
 This plugin has been verified to work with the following apps on iOS 14:
 
+* Home Assistant
 * Apple Home
-* All 3rd party apps like Elgato Eve etc.
 * Homebridge >= v1.1.6
 
 ## TODO
